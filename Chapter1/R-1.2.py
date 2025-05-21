@@ -9,10 +9,13 @@ def is_even(k):
     返回:
     bool: 如果k是偶数返回True，否则返回False
     """
-    return (k & 1) == 0
+    return (k & 1) == 0  # 使用位运算&（按位与）操作。
 
-print(is_even(4))   # 输出: True
-print(is_even(7))   # 输出: False
-print(is_even(0))   # 输出: True
+
+# 任何数与1进行按位与操作，结果为0表示最后一位是0（偶数），结果为1表示最后一位是1（奇数）
+
+print(is_even(4))  # 输出: True
+print(is_even(7))  # 输出: False
+print(is_even(0))  # 输出: True
 print(is_even(-2))  # 输出: True
 print(is_even(-3))  # 输出: False

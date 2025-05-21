@@ -10,12 +10,12 @@ def is_multiple(n, m):
     返回:
     bool: 如果n是m的倍数返回True，否则返回False
     """
-    if m == 0:
+    if m == 0:  # 首先检查m是否为0（因为0不能作为除数）
         return False  # 0不能作为除数
-    return n % m == 0
+    return n % m == 0  # 使用模运算符%来检查n除以m的余数是否为0，如果余数为0，则n是m的倍数，返回True；否则返回False
 
 
 print(is_multiple(10, 5))  # 输出: True
 print(is_multiple(10, 3))  # 输出: False
-print(is_multiple(0, 5))   # 输出: True (0是任何非零数的倍数)
-print(is_multiple(5, 0))   # 输出: False (0不能作为除数)
+print(is_multiple(0, 5))  # 输出: True (0是任何非零数的倍数)
+print(is_multiple(5, 0))  # 输出: False (0不能作为除数)
